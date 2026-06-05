@@ -1,0 +1,255 @@
+# 🎓 Student Grade Calculator
+
+### DecodeLabs Industrial Training | Java Programming — Project 2 | Batch 2026
+
+[![Java](https://img.shields.io/badge/Java-JDK%208%2B-orange?style=flat-square&logo=java)](https://www.oracle.com/java/)
+[![Status](https://img.shields.io/badge/Status-Complete-brightgreen?style=flat-square)]()
+[![DecodeLabs](https://img.shields.io/badge/Powered%20by-DecodeLabs-blueviolet?style=flat-square)](https://www.decodelabs.tech)
+[![License](https://img.shields.io/badge/License-Educational-blue?style=flat-square)]()
+
+---
+
+## 📌 Project Overview
+
+A professional, console-based **Student Grade Calculator** built in Java as part of the
+DecodeLabs Industrial Training Programme (Batch 2026).
+
+This project follows the **Input → Process → Output (IPO) architectural model**:
+- **INPUT** — Student name and subject marks (with full validation)
+- **PROCESS** — Total, average, grade, pass/fail, highest, lowest
+- **OUTPUT** — Professionally formatted report card
+
+> *"In Project 1, you relied on luck. In Project 2, luck is not allowed."*
+> — DecodeLabs
+
+---
+
+## ✨ Features
+
+| # | Feature | Details |
+|---|---------|---------|
+| 1 | 🔢 Dynamic Subjects | User chooses number of subjects (1 – 20) |
+| 2 | ✅ Input Validation | Rejects marks < 0 or > 100, re-prompts on invalid |
+| 3 | 🧮 Total & Average | Type-cast division — no truncation errors |
+| 4 | 🎯 6-Tier Grade System | A+, A, B, C, D, F based on percentage |
+| 5 | ✔️ Pass / Fail Status | Per-subject AND overall average check |
+| 6 | 📊 Subject-wise Report | Tabular display of all subjects and marks |
+| 7 | 🏆 Highest & Lowest | Best and worst subject detected automatically |
+| 8 | 💬 Performance Remark | Outstanding → Needs Improvement |
+| 9 | 🔒 Exception Handling | Catches NumberFormatException for non-numeric input |
+| 10 | 🖥️ Formatted Output | Box-bordered report card using System.out.printf |
+
+---
+
+## 📐 Grade System
+
+| Grade | Percentage Range | Performance Remark   |
+|-------|-----------------|----------------------|
+| A+    | 90 – 100 %      | 🌟 Outstanding       |
+| A     | 80 – 89 %       | 🏆 Excellent         |
+| B     | 70 – 79 %       | 👍 Very Good         |
+| C     | 60 – 69 %       | ✅ Good              |
+| D     | 50 – 59 %       | 📘 Average           |
+| F     | Below 50 %      | ⚠️ Needs Improvement |
+
+**Pass Condition:** Average ≥ 40% AND every individual subject ≥ 40 marks.
+
+---
+
+## 🔧 Requirements
+
+| Requirement | Details |
+|-------------|---------|
+| Java JDK | Version 8 or higher (tested on JDK 21) |
+| OS | Windows / macOS / Linux |
+| IDE (optional) | VS Code, IntelliJ IDEA, Eclipse |
+| Terminal | Command Prompt, PowerShell, or Bash |
+
+---
+
+## 📁 Project Structure
+
+```
+StudentGradeCalculator/
+│
+├── src/
+│   └── StudentGradeCalculator.java    ← Main source file (all code here)
+│
+├── docs/
+│   └── PROJECT_DOCUMENTATION.md      ← Analysis, Q&A, viva questions
+│
+├── report/
+│   └── INTERNSHIP_REPORT.md          ← Complete internship report
+│
+├── README.md                         ← This file
+└── LINKEDIN_AND_RESUME.md            ← LinkedIn post + resume bullets
+```
+
+---
+
+## 🚀 How to Run
+
+### Step 1 — Verify Java is installed
+```bash
+java -version
+javac -version
+```
+Both must show a version number. If not, download JDK from:
+👉 https://www.oracle.com/java/technologies/downloads/
+
+---
+
+### Step 2 — Save the file
+Make sure your file is saved as:
+```
+StudentGradeCalculator.java
+```
+> ⚠️ The filename MUST match the class name exactly. Java is case-sensitive.
+
+---
+
+### Step 3 — Open terminal in the same folder
+In VS Code: press **Ctrl + `** (backtick) to open the built-in terminal.
+
+Make sure the terminal path shows your project folder:
+```
+PS C:\Users\YourName\...\WEEK 2>
+```
+
+---
+
+### Step 4 — Compile
+```bash
+javac StudentGradeCalculator.java
+```
+✅ No output = success. A `StudentGradeCalculator.class` file is created.
+
+---
+
+### Step 5 — Run
+```bash
+java StudentGradeCalculator
+```
+
+---
+
+## 🖥️ Sample Input & Output
+
+**Input:**
+```
+╔══════════════════════════════════════════════════════╗
+║        STUDENT GRADE CALCULATOR  v2.0               ║
+║        Powered by DecodeLabs | Batch 2026           ║
+╚══════════════════════════════════════════════════════╝
+
+Enter Student Name : Ananya Sharma
+Enter Number of Subjects (1-20) : 3
+
+  Enter marks for each subject (0-100):
+  ----------------------------------------
+  Subject 1 Name  : Mathematics
+  Subject 1 Marks : 88
+
+  Subject 2 Name  : Physics
+  Subject 2 Marks : 76
+
+  Subject 3 Name  : Chemistry
+  Subject 3 Marks : 92
+```
+
+**Output:**
+```
+╔══════════════════════════════════════════════════════╗
+║               STUDENT REPORT CARD                   ║
+║           DecodeLabs | Batch 2026                   ║
+╠══════════════════════════════════════════════════════╣
+║  Student Name  : Ananya Sharma                      ║
+║  Total Subjects: 3                                  ║
+╠══════════════════════════════════════════════════════╣
+║          SUBJECT-WISE MARKS BREAKDOWN               ║
+╠══════════════════╦═════════╦════════════════════════╣
+║ Subject          ║  Marks  ║  Out Of                ║
+╠══════════════════╬═════════╬════════════════════════╣
+║ Mathematics      ║    88   ║  100                   ║
+║ Physics          ║    76   ║  100                   ║
+║ Chemistry        ║    92   ║  100                   ║
+╠══════════════════╩═════════╩════════════════════════╣
+║  Total Marks   : 256                                ║
+║  Max Possible  : 300                                ║
+║  Average (%)   : 85.33%                             ║
+╠══════════════════════════════════════════════════════╣
+║  Grade         : A                                  ║
+║  Status        : PASS ✓                             ║
+║  Highest Mark  : 92                                 ║
+║  Lowest Mark   : 76                                 ║
+║  Remark        : Excellent                          ║
+╚══════════════════════════════════════════════════════╝
+
+  Thank you for using StudentGradeCalculator by DecodeLabs!
+```
+
+---
+
+## 🧠 Java Concepts Used
+
+| Concept | Where Used |
+|---------|-----------|
+| Variables & Data Types | `int`, `double`, `String` for marks, average, name |
+| Scanner Class | Reading keyboard input with buffer trap fix |
+| Arrays | `int[]` for marks, `String[]` for subject names |
+| For Loop | Accumulator pattern — summing all marks |
+| While Loop | Input validation — re-prompt on invalid entry |
+| If-Else Ladder | Grade assignment — strictest condition first |
+| Methods | 11 methods, one job each (Single Responsibility) |
+| Exception Handling | `try-catch` for `NumberFormatException` |
+| Type Casting | `(double)` before division — prevents truncation |
+| printf & format | `%.2f` for 2-decimal output, `%-16s` for alignment |
+| Constants | `static final` for MAX_MARKS, MIN_MARKS, PASS_PERCENT |
+
+---
+
+## ⚠️ Common Errors & Fixes
+
+| Error Message | Cause | Fix |
+|---------------|-------|-----|
+| `no class declared in source file` | File not saved, or duplicate class | Press Ctrl+S, then recompile |
+| `error: class X is public, should be in file X.java` | Filename ≠ class name | Rename file to match class exactly |
+| `could not find or load main class` | Compiled old/broken version | Save file → javac again → java |
+| `cannot find symbol` | Method name typo or missing method | Check spelling, ensure all methods are in the file |
+| `reached end of file while parsing` | Missing closing brace `}` | Count your `{` and `}` — they must match |
+
+---
+
+## 🔮 Future Improvements
+
+- [ ] OOP refactor: `Student`, `GradeCalculator`, `ReportGenerator` classes
+- [ ] File I/O: Save results to a `.csv` file using `FileWriter`
+- [ ] Database: JDBC + MySQL for persistent student records
+- [ ] GUI: Java Swing or JavaFX graphical interface
+- [ ] Multi-student: Class-wide average and batch processing
+- [ ] PDF export: Apache PDFBox report generation
+- [ ] REST API: Spring Boot endpoint for web integration
+
+---
+
+## 📞 Contact — DecodeLabs
+
+| | |
+|--|--|
+| 📞 Phone | +91 89330 06408 |
+| ✉️ Email | decodelabs.tech@gmail.com |
+| 🌐 Website | www.decodelabs.tech |
+| 📍 Location | Greater Lucknow, Uttar Pradesh, India |
+
+---
+
+## 📄 License
+
+This project is part of the **DecodeLabs Industrial Training Programme**.
+Free to use for educational and portfolio purposes.
+
+---
+
+*"You are building a micro-version of industry tools like Drools or DecisionRules.
+Separating logic from infrastructure allows for auditability and easier updates."*
+— DecodeLabs (RE-SPEC-013)

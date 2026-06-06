@@ -1,0 +1,47 @@
+# 🏧 ATM Interface
+
+### DecodeLabs Industrial Training | Java Programming — Project 3 | Batch 2026
+
+[![Java](https://img.shields.io/badge/Java-JDK%208%2B-orange?style=flat-square&logo=java)](https://www.oracle.com/java/)
+[![Status](https://img.shields.io/badge/Status-Complete-brightgreen?style=flat-square)]()
+[![OOP](https://img.shields.io/badge/Concept-OOP%20%26%20Encapsulation-blue?style=flat-square)]()
+
+---
+
+## 📌 Project Overview
+A console-based ATM Interface built in Java using
+Object-Oriented Programming principles.
+Two separate classes handle UI and business logic cleanly.
+
+## ✨ Features
+| # | Feature | Details |
+|---|---------|---------|
+| 1 | 💰 Check Balance | Displays account info and current balance |
+| 2 | ➕ Deposit | Validates and adds money to account |
+| 3 | ➖ Withdraw | Validates amount and checks sufficient funds |
+| 4 | 🔒 Encapsulation | Balance is private — protected from direct access |
+| 5 | 🛡 Input Validation | Never crashes on bad input using hasNextDouble() |
+| 6 | 🏗 Separated Logic | ATM class (UI) separate from BankAccount class (Logic) |
+
+## 🧠 Java Concepts Used
+| Concept | Where Used |
+|---------|-----------|
+| Classes & Objects | BankAccount and ATM are separate classes |
+| Encapsulation | private balance with public getters/setters |
+| Methods | deposit(), withdraw(), checkBalance() |
+| Constructor | BankAccount initialized with account details |
+| Input Validation | hasNextDouble(), hasNextInt() |
+| While Loop | Main ATM run loop + input validation loop |
+| Switch Statement | Menu choice handling |
+
+## 🚀 How to Run
+**Step 1 — Compile**
+```bash
+javac ATMInterface.java
+```
+**Step 2 — Run**
+```bash
+java ATMInterface
+```
+
+## ✅ Status: Complete
